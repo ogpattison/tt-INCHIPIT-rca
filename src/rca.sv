@@ -25,7 +25,13 @@ module rca
                 );
             end else begin: gen_gt0
                 /* Completare qui. */
-
+                fa_module u(
+                    .a(a[i]),
+                    .b(b[i]),
+                    .cin(carry[i-1]),
+                    .y(sum[i]),
+                    .cout(carry[i])
+                );
             end
         end
     endgenerate
